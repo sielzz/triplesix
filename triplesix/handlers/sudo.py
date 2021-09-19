@@ -30,17 +30,18 @@ async def add_sudo_to_chat(_, message: Message):
 @authorized_users_only
 async def del_sudo_from_chat(_, message: Message):
     replied = message.reply_to_message
+    chat_id = message.chat.id
     if not replied:
         sudo_id = int(message.command[1])
         try:
-            del_sudo(sudo_id)
+            del_sudo(chat_id, sudo_id)
             await message.reply("delete sudo success")
         except Exception as e:
             await message.reply(f"{type(e).__name__}: {str(e.with_traceback(e.__traceback__))}")
         return
     sudo_id = replied.from_user.id
     try:
-        del_sudo(sudo_id)
+        del_sudo(chat_id, sudo_id)
         await message.reply("delete sudo successfully")
     except Exception as e:
         await message.reply(f"{type(e).__name__}: {str(e.with_traceback(e.__traceback__))}")
