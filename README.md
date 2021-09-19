@@ -1,16 +1,16 @@
 <h2 align="centre">VIDEO STREAM BOT</h2>
 
-telegram bot project for streaming video on telegram video chat, powered by [pytgcalls](https://github.com/MarshalX/tgcalls) and [pyrogram](https://github.com/pyrogram/pyrogram)
+telegram bot project for streaming video on telegram video chat, powered by [py-tgcalls](https://github.com/pytgcalls/pytgcalls) and [pyrogram](https://github.com/pyrogram/pyrogram)
 
 <p align="center"><a href="https://t.me/shohih_abdul2"><img src="https://telegra.ph/file/4e8717d59d74412cf0e50.jpg" width="300"></a></p>
 <p align="center">
     <a href="https://www.python.org/" > <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
-    <a href="https://github.com/DoellBarr/sixnine/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a>
-    <a href="https://github.com/DoellBarr/sixnine"> <img src="https://img.shields.io/github/repo-size/DoellBarr/sixnine?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/DoellBarr/sixnine/commits/main"> <img src="https://img.shields.io/github/last-commit/DoellBarr/sixnine?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/DoellBarr/sixnine/issues"> <img src="https://img.shields.io/github/issues/DoellBarr/sixnine?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/DoellBarr/sixnine/network/members"> <img src="https://img.shields.io/github/forks/DoellBarr/sixnine?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
-    <a href="https://github.com/DoellBarr/sixnine/network/members"> <img src="https://img.shields.io/github/stars/DoellBarr/sixnine?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
+    <a href="https://github.com/DoellBarr/triplesix/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a>
+    <a href="https://github.com/DoellBarr/triplesix"> <img src="https://img.shields.io/github/repo-size/DoellBarr/triplesix?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/DoellBarr/triplesix/commits/main"> <img src="https://img.shields.io/github/last-commit/DoellBarr/triplesix?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/DoellBarr/triplesix/issues"> <img src="https://img.shields.io/github/issues/DoellBarr/triplesix?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/DoellBarr/triplesix/network/members"> <img src="https://img.shields.io/github/forks/DoellBarr/triplesix?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
+    <a href="https://github.com/DoellBarr/triplesix/network/members"> <img src="https://img.shields.io/github/stars/DoellBarr/triplesix?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
 </p>
 
 ## ✨ Features
@@ -39,14 +39,18 @@ telegram bot project for streaming video on telegram video chat, powered by [pyt
 TAP THIS: [![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@levinalab/StringSession#main.py)
 
 ## 💜 Deploy To Heroku
-Coming soon
+
+Easy way to host this bot
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DoellBarr/triplesix)
+
 
 ## VPS Deployment
 ```sh
 - sudo apt update && upgrade -y
 - sudo apt install python3-pip -y virtualenv
 - sudo apt install ffmpeg -y
-- git clone https://github.com/DoellBarr/sixnine
+- git clone https://github.com/DoellBarr/triplesix
 - cd video-stream
 - virtualenv venv #Create Virtual Environment.
 - source venv/bin/activate #Activate Virtual Environment
@@ -59,7 +63,7 @@ Coming soon
 
 # Special Credits 💖
 - [DoellBarr](https://github.com/DoellBarr) ``Dev``
-- [MarshalX](https://github.com/MarshalX) for [``pytgcalls``](https://github.com/MarshalX/tgcalls)
+- [Laky64](https://github.com/laky-64) for [``py-tgcalls``](https://github.com/pytgcalls/pytgcalls)
 - [Dan](https://github.com/delivrance) for [``Pyrogram``](https://github.com/pyrogram)
 
 ## Thanks To:
