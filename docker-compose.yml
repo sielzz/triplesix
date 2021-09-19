@@ -1,0 +1,11 @@
+# Copyright (C) 2021 By VeezMusicProject
+
+
+version: '3.4'
+
+services:
+  triplesix:
+    image: triplesix
+    build:
+      context: .
+      dockerfile: ./Dockerfile
