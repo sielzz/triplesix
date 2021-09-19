@@ -1,0 +1,10 @@
+chat.db
+test.py
+triplesix/session.session
+__pycache__
+triplesix/__pycache__
+dB/__pycache__
+venv/
+local.env
+.idea
+*.jpg
