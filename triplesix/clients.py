@@ -64,6 +64,7 @@ class Player:
 				return
 			except KeyError:
 				await message.reply("restart the bot")
+				playlist[chat_id].clear()
 				return
 		y = await message.reply(get_message(chat_id, "process"))
 		url = await get_youtube_stream(query)
@@ -82,13 +83,15 @@ class Player:
 				await self._stream(query, message, url, y)
 			except Exception as ex:
 				await y.edit(f"{type(ex).__name__}: {ex.with_traceback(ex.__traceback__)}")
+				playlist[chat_id].clear()
 		except Exception as ex:
 			await y.edit(f"{type(ex).__name__}: {ex.with_traceback(ex.__traceback__)}")
+			playlist[chat_id].clear()
 
 	async def start_stream(self, query: str, message: Message):
 		await self._start_stream(query, message)
 
-	async def start_stream_via_callack(self, query: str, callback: CallbackQuery):
+	async def start_stream_via_callback(self, query: str, callback: CallbackQuery):
 		message = callback.message
 		await self._start_stream(query, message)
 
