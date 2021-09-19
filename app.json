@@ -1,0 +1,33 @@
+{
+  "name": "TripleSix Bot",
+  "description": "Telegram bot for streaming video on your voice chat",
+  "keywords": ["video chat", "streaming", "telegram"],
+  "repository": "https://github.com/DoellBarr/triplesix",
+  "stack": "container",
+  "env": {
+    "SESSION": {
+      "description": "fill it with pyrogram(p) session string",
+      "required": true
+    },
+    "API_ID": {
+      "description": "fill it with your API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "fill it with your API HASH from my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "fill it with bot token from botfather",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
