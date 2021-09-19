@@ -34,7 +34,7 @@ async def get_youtube_stream(query: str):
 
 
 def authorized_users_only(func: Callable) -> Callable:
-    """Only authorized users (admin or sudo) can use the command"""
+    """Only authorized users (admin or sudo or owner) can use the command"""
     async def wrapper(client: Client, message: Message):
         if message.from_user.id in get_sudos(message.chat.id):
             return await func(client, message)

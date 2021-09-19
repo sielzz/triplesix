@@ -110,5 +110,11 @@ class Player:
 		except GroupCallNotFound:
 			await message.reply("not streaming")
 
+	async def change_vol(self, message: Message):
+		volume = int("".join(message.command[1]))
+		chat_id = message.chat.id
+		await self._client[chat_id].change_volume_call(chat_id, volume)
+		await message.reply(f"Volume changed to {volume}%")
+
 
 player = Player(PyTgCalls(user))
