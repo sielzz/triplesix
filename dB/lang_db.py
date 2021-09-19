@@ -32,4 +32,4 @@ def del_chat(chat_id: int):
 
 
 def get(chat_id: int):
-    return [row for row in cur.execute(f"SELECT * FROM chat_ids WHERE chat = {chat_id}")]
+    return list(cur.execute(f"SELECT * FROM chat_ids WHERE chat = {chat_id}"))
