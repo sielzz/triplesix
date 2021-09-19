@@ -4,8 +4,10 @@ conn = sqlite3.connect("chat.db")
 cur = conn.cursor()
 
 try:
-    cur.execute('''CREATE TABLE chat_ids
-               (chat text, lang text)''')
+    cur.execute(
+        """CREATE TABLE chat_ids
+               (chat text, lang text)"""
+    )
 except sqlite3.OperationalError:
     pass
 
@@ -20,9 +22,11 @@ def add_chat(chat_id: int, lang="en"):
 
 
 def set_lang(chat_id: int, lang: str):
-    cur.execute(f"""UPDATE chat_ids
+    cur.execute(
+        f"""UPDATE chat_ids
     SET chat = {chat_id}, lang = '{lang}'
-    WHERE chat = {chat_id}""")
+    WHERE chat = {chat_id}"""
+    )
     conn.commit()
 
 
