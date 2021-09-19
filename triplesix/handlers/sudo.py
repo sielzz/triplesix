@@ -15,14 +15,18 @@ async def add_sudo_to_chat(_, message: Message):
             add_sudo(chat_id, sudo_id)
             await message.reply("success add sudo")
         except Exception as Ex:
-            await message.reply(f"{type(Ex).__name__}: {str(Ex.with_traceback(Ex.__traceback__))}")
+            await message.reply(
+                f"{type(Ex).__name__}: {str(Ex.with_traceback(Ex.__traceback__))}"
+            )
         return
     sudo_id = replied.from_user.id
     try:
         add_sudo(chat_id, sudo_id)
         await message.reply("success add sudo")
     except Exception as Ex:
-        await message.reply(f"{type(Ex).__name__}: {str(Ex.with_traceback(Ex.__traceback__))}")
+        await message.reply(
+            f"{type(Ex).__name__}: {str(Ex.with_traceback(Ex.__traceback__))}"
+        )
     return
 
 
@@ -37,14 +41,18 @@ async def del_sudo_from_chat(_, message: Message):
             del_sudo(chat_id, sudo_id)
             await message.reply("delete sudo success")
         except Exception as e:
-            await message.reply(f"{type(e).__name__}: {str(e.with_traceback(e.__traceback__))}")
+            await message.reply(
+                f"{type(e).__name__}: {str(e.with_traceback(e.__traceback__))}"
+            )
         return
     sudo_id = replied.from_user.id
     try:
         del_sudo(chat_id, sudo_id)
         await message.reply("delete sudo successfully")
     except Exception as e:
-        await message.reply(f"{type(e).__name__}: {str(e.with_traceback(e.__traceback__))}")
+        await message.reply(
+            f"{type(e).__name__}: {str(e.with_traceback(e.__traceback__))}"
+        )
     return
 
 
