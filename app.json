@@ -3,7 +3,7 @@
   "description": "Telegram bot for streaming video on your voice chat",
   "keywords": ["video chat", "streaming", "telegram"],
   "repository": "https://github.com/DoellBarr/triplesix",
-  "stack": "container",
+  "stack": "heroku-20",
   "env": {
     "SESSION": {
       "description": "fill it with pyrogram(p) session string",
