@@ -21,20 +21,21 @@ def command(cmd: str):
 
 async def get_youtube_stream(query: str):
     proc = await asyncio.create_subprocess_exec(
-        'youtube-dl',
-        '-g',
-        '-f',
-        'best[height<=?720][width<=?1280]',
+        "youtube-dl",
+        "-g",
+        "-f",
+        "best[height<=?720][width<=?1280]",
         f"https://youtube.com{YoutubeSearch(query, 1).to_dict()[0]['url_suffix']}",
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
     stdout, stderr = await proc.communicate()
-    return stdout.decode().split('\n')[0]
+    return stdout.decode().split("\n")[0]
 
 
 def authorized_users_only(func: Callable) -> Callable:
     """Only authorized users (admin or sudo or owner) can use the command"""
+
     async def wrapper(client: Client, message: Message):
         if message.from_user.id in get_sudos(message.chat.id):
             return await func(client, message)
@@ -47,6 +48,7 @@ def authorized_users_only(func: Callable) -> Callable:
         person = await message.chat.get_member(message.from_user.id)
         if person.status == "creator":
             return await func(client, message)
+
     return wrapper
 
 
